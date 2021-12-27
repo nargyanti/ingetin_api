@@ -19,7 +19,7 @@ class CategoryRequest extends ApiRequest
     {
         if ($this->method() == Request::METHOD_POST)
             return true;
-        $category = $this->route('category');
+        $category = $this->route('categories');
         return auth()->user()->id == $category->user_id;
     }
 
